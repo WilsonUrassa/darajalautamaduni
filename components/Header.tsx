@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
@@ -7,6 +6,8 @@ const NAV_LINKS = [
   { href: "#about", label: "About" },
   { href: "#programmes", label: "Programmes" },
   { href: "#beneficiaries", label: "Beneficiaries" },
+  { href: "/projects", label: "Projects & Proposals" },
+  { href: "/gallery", label: "Gallery" },
   { href: "#partner", label: "Partner With Us" },
   { href: "#sdgs", label: "SDGs" },
   { href: "#contact", label: "Contact" },
@@ -15,110 +16,13 @@ const NAV_LINKS = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
-        scrolled
-          ? "py-3 bg-paper/90 backdrop-blur-md shadow-[0_8px_24px_-18px_rgba(22,50,79,0.4)]"
-          : "py-5"
-      }`}
-    >
-      <div className="max-w-[1180px] mx-auto px-6 md:px-8 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-3 min-w-0">
-          <Image
-            src="/logo.png"
-            alt="Daraja la Utamaduni Organization logo"
-            width={44}
-            height={44}
-            className={`object-contain transition-all duration-300 ${
-              scrolled ? "h-9 w-9" : "h-11 w-11"
-            }`}
-          />
-          <span className="flex flex-col leading-tight min-w-0">
-            <span className="font-display font-bold text-[0.95rem] md:text-[1.05rem] truncate">
-              DARAJA LA UTAMADUNI
-            </span>
-            <small className="font-mono text-[0.6rem] tracking-widest text-forest uppercase">
-              Kwa Maendeleo Endelevu
-            </small>
-          </span>
-        </a>
-
-        <ul className="hidden lg:flex items-center gap-8 text-[0.92rem] font-medium">
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="relative py-1 hover:text-clay transition-colors"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        <div className="flex items-center gap-4">
-          <a
-            href="#contact"
-            className="hidden md:inline-flex items-center gap-2 rounded-full border-[1.5px] border-ink bg-ink text-paper px-5 py-2.5 font-mono text-[0.8rem] uppercase tracking-wide hover:-translate-y-0.5 hover:shadow-[0_14px_26px_-10px_rgba(22,50,79,0.55)] transition-all"
-          >
-            Get in Touch
-          </a>
-          <button
-            aria-label="Toggle menu"
-            className="lg:hidden flex flex-col gap-1.5 p-2"
-            onClick={() => setOpen((o) => !o)}
-          >
-            <span
-              className={`block w-6 h-0.5 bg-ink transition-transform ${
-                open ? "translate-y-2 rotate-45" : ""
-              }`}
-            />
-            <span
-              className={`block w-6 h-0.5 bg-ink transition-opacity ${
-                open ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`block w-6 h-0.5 bg-ink transition-transform ${
-                open ? "-translate-y-2 -rotate-45" : ""
-              }`}
-            />
-          </button>
-        </div>
-      </div>
-
-      {/* mobile menu */}
-      <div
-        className={`lg:hidden fixed top-0 right-0 h-screen w-[78%] max-w-sm bg-ink text-paper flex flex-col justify-center gap-7 px-10 transition-transform duration-300 z-[99] ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        {NAV_LINKS.map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            className="text-lg font-medium"
-            onClick={() => setOpen(false)}
-          >
-            {link.label}
-          </a>
-        ))}
-        <a
-          href="#contact"
-          className="mt-4 inline-flex w-fit items-center gap-2 rounded-full border border-gold text-gold px-5 py-2.5 font-mono text-sm uppercase tracking-wide"
-          onClick={() => setOpen(false)}
-        >
-          Get in Touch
-        </a>
-      </div>
-    </header>
-  );
+  useEffect(() => { const onScroll=()=>setScrolled(window.scrollY>40); window.addEventListener("scroll",onScroll); return()=>window.removeEventListener("scroll",onScroll); },[]);
+  return <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled?"py-3 bg-paper/90 backdrop-blur-md shadow-[0_8px_24px_-18px_rgba(22,50,79,0.4)]":"py-5"}`}>
+    <div className="max-w-[1180px] mx-auto px-6 md:px-8 flex items-center justify-between">
+      <a href="/#top" className="flex items-center gap-3 min-w-0"><Image src="/logo.png" alt="Daraja la Utamaduni Organization logo" width={44} height={44} className={`object-contain transition-all duration-300 ${scrolled?"h-9 w-9":"h-11 w-11"}`}/><span className="flex flex-col leading-tight min-w-0"><span className="font-display font-bold text-[0.95rem] md:text-[1.05rem] truncate">DARAJA LA UTAMADUNI</span><small className="font-mono text-[0.6rem] tracking-widest text-forest uppercase">Kwa Maendeleo Endelevu</small></span></a>
+      <ul className="hidden lg:flex items-center gap-6 text-[0.84rem] font-medium">{NAV_LINKS.map(link=><li key={link.href}><a href={link.href} className="relative py-1 hover:text-clay transition-colors">{link.label}</a></li>)}</ul>
+      <div className="flex items-center gap-4"><a href="/#contact" className="hidden md:inline-flex items-center gap-2 rounded-full border-[1.5px] border-ink bg-ink text-paper px-5 py-2.5 font-mono text-[0.8rem] uppercase tracking-wide">Get in Touch</a><button aria-label="Toggle menu" className="lg:hidden flex flex-col gap-1.5 p-2" onClick={()=>setOpen(o=>!o)}><span className={`block w-6 h-0.5 bg-ink transition-transform ${open?"translate-y-2 rotate-45":""}`}/><span className={`block w-6 h-0.5 bg-ink transition-opacity ${open?"opacity-0":""}`}/><span className={`block w-6 h-0.5 bg-ink transition-transform ${open?"-translate-y-2 -rotate-45":""}`}/></button></div>
+    </div>
+    <div className={`lg:hidden fixed top-0 right-0 h-screen w-[82%] max-w-sm bg-ink text-paper flex flex-col justify-center gap-7 px-10 transition-transform duration-300 z-[99] ${open?"translate-x-0":"translate-x-full"}`}>{NAV_LINKS.map(link=><a key={link.href} href={link.href} className="text-lg font-medium" onClick={()=>setOpen(false)}>{link.label}</a>)}<a href="/#contact" className="mt-4 inline-flex w-fit rounded-full border border-gold text-gold px-5 py-2.5 font-mono text-sm uppercase tracking-wide" onClick={()=>setOpen(false)}>Get in Touch</a></div>
+  </header>;
 }
