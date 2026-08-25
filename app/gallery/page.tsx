@@ -1,0 +1,3 @@
+import Link from "next/link";
+import { GalleryMedia } from "@/components/SupabaseMedia";
+export default function GalleryPage(){return <main className="min-h-screen bg-sand"><div className="max-w-[1180px] mx-auto px-6 md:px-8 pt-40 pb-16"><span className="eyebrow">Project Gallery</span><h1 className="font-display font-extrabold text-[2.8rem] md:text-[4.5rem] leading-tight mt-4 max-w-4xl">Stories from the field.</h1><p className="text-ink/65 text-lg max-w-2xl mt-5">Photos and videos from our projects, programmes and community activities.</p><div className="mt-12"><GalleryMedia/></div><div className="mt-14"><Link href="/" className="rounded-full bg-ink text-paper px-6 py-3 font-mono text-xs uppercase tracking-widest">← Back Home</Link></div></div></main>}
