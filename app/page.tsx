@@ -12,6 +12,7 @@ import Alignment from "@/components/Alignment";
 import CallToAction from "@/components/CallToAction";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import { ProjectsSection } from "@/components/ProjectsGallerySection";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <Partnership />
       <SDGs />
       <Alignment />
+      <ProjectsSection />
       <CallToAction />
       <ContactForm />
       <Footer />
