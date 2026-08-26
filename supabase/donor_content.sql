@@ -1,15 +1,49 @@
 -- Donor-ready CMS tables for Daraja la Utamaduni
-create table if not exists public.organization_leaders (id uuid primary key default gen_random_uuid(), name text not null, role text not null, bio text, photo_url text not null, sort_order integer not null default 0, published boolean not null default true, created_at timestamptz not null default now());
-create table if not exists public.organization_content (id uuid primary key default gen_random_uuid(), section text not null check(section in ('identity','impact','governance','safeguarding','accountability')), title text not null, body text, metric_value text, metric_label text, image_url text, document_url text, document_name text, sort_order integer not null default 0, published boolean not null default true, created_at timestamptz not null default now());
+create table if not exists public.organization_leaders (
+  id uuid primary key default gen_random_uuid(),
+  name text not null,
+  role text not null,
+  bio text,
+  photo_url text not null,
+  sort_order integer not null default 0,
+  published boolean not null default true,
+  created_at timestamptz not null default now()
+);
+
+create table if not exists public.organization_content (
+  id uuid primary key default gen_random_uuid(),
+  section text not null check(section in ('identity','impact','governance','safeguarding','accountability')),
+  title text not null,
+  body text,
+  metric_value text,
+  metric_label text,
+  image_url text,
+  document_url text,
+  document_name text,
+  sort_order integer not null default 0,
+  published boolean not null default true,
+  created_at timestamptz not null default now()
+);
+
 alter table public.organization_leaders enable row level security;
 alter table public.organization_content enable row level security;
+
 drop policy if exists "Public can view published leaders" on public.organization_leaders;
 create policy "Public can view published leaders" on public.organization_leaders for select to anon, authenticated using(published=true);
 drop policy if exists "Public can view published organization content" on public.organization_content;
 create policy "Public can view published organization content" on public.organization_content for select to anon, authenticated using(published=true);
+drop policy if exists "Authenticated manage leaders" on public.organization_leaders;
+create policy "Authenticated manage leaders" on public.organization_leaders for all to authenticated using(true) with check(true);
+drop policy if exists "Authenticated manage organization content" on public.organization_content;
+create policy "Authenticated manage organization content" on public.organization_content for all to authenticated using(true) with check(true);
+
 insert into storage.buckets(id,name,public) values('organization-media','organization-media',true) on conflict(id) do update set public=true;
 insert into storage.buckets(id,name,public) values('organization-documents','organization-documents',true) on conflict(id) do update set public=true;
 drop policy if exists "Public can read organization media" on storage.objects;
 create policy "Public can read organization media" on storage.objects for select to anon, authenticated using(bucket_id='organization-media');
 drop policy if exists "Public can read organization documents" on storage.objects;
 create policy "Public can read organization documents" on storage.objects for select to anon, authenticated using(bucket_id='organization-documents');
+drop policy if exists "Authenticated manage organization media" on storage.objects;
+create policy "Authenticated manage organization media" on storage.objects for all to authenticated using(bucket_id='organization-media') with check(bucket_id='organization-media');
+drop policy if exists "Authenticated manage organization documents" on storage.objects;
+create policy "Authenticated manage organization documents" on storage.objects for all to authenticated using(bucket_id='organization-documents') with check(bucket_id='organization-documents');
