@@ -16,19 +16,33 @@ import { ProjectsSection } from "@/components/ProjectsGallerySection";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-hidden bg-paper">
       <Header />
+
+      {/* Brand-led introduction */}
       <Hero />
+
+      {/* The Director's original message remains unchanged */}
       <DirectorMessage />
+
+      {/* Core organizational identity */}
       <About />
       <Philosophy />
+
+      {/* What we do */}
       <Programmes />
       <Beneficiaries />
       <StrategicApproach />
+
+      {/* Partnership and development alignment */}
       <Partnership />
       <SDGs />
       <Alignment />
+
+      {/* Current work / proposals / gallery content from the CMS */}
       <ProjectsSection />
+
+      {/* Clear invitation to engage */}
       <CallToAction />
       <ContactForm />
       <Footer />
