@@ -11,7 +11,7 @@ const GROUPS = [
   },
   {
     title: "Children",
-    desc: "Through inclusive education, cultural learning, protection and community-based support.",
+    desc: "Through inclusive education, cultural learning, protection and community based support.",
   },
   {
     title: "Persons with Disabilities",
