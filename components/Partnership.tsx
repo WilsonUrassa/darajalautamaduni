@@ -26,12 +26,12 @@ const STAKEHOLDERS = [
     desc: "To co-design and finance programmes aligned with shared development priorities.",
   },
   {
-    title: "Foundations & Grant-Making Institutions",
+    title: "Foundations & Grant Making Institutions",
     desc: "To invest in innovative, community based interventions.",
   },
   {
     title: "Corporate Partners",
-    desc: "To support communities through Corporate Social Responsibility and shared-value initiatives.",
+    desc: "To support communities through Corporate Social Responsibility and shared value initiatives.",
   },
   {
     title: "Government Institutions",
@@ -39,11 +39,11 @@ const STAKEHOLDERS = [
   },
   {
     title: "Academic & Research Institutions",
-    desc: "To conduct research, documentation, innovation and knowledge-generation initiatives.",
+    desc: "To conduct research, documentation, innovation and knowledge generation initiatives.",
   },
   {
     title: "International NGOs & Networks",
-    desc: "To develop joint programmes, consortiums and knowledge-sharing partnerships.",
+    desc: "To develop joint programmes, consortiums and knowledge sharing partnerships.",
   },
   {
     title: "Individual Philanthropists",
