@@ -65,14 +65,14 @@ export default function ContactForm() {
             Tell Us How You&rsquo;d Like to Join the Bridge
           </h2>
           <p className="text-paper/65 mt-4">
-            Send us a message about volunteering, funding, or partnership
-            &mdash; our team will get back to you as soon as possible.
+            Send us a message about volunteering, funding, or partnership.
+            Our team will get back to you as soon as possible.
           </p>
         </Reveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <Reveal className="flex flex-col gap-7">
-            <InfoItem icon="📍" title="Head Office">
+            <InfoItem title="Head Office">
               Mtaa wa Sokoni, near Ofisi ya Mtaa wa Sokoni
               <br />
               Njoro Ward, Moshi District
@@ -81,19 +81,18 @@ export default function ContactForm() {
               <br />
               P.O. Box 7889
             </InfoItem>
-            <InfoItem icon="✉️" title="Email">
+            <InfoItem title="Email">
               darajalautamaduniorganization@gmail.com
             </InfoItem>
-            <InfoItem icon="📞" title="Telephone">
+            <InfoItem title="Telephone">
               +255 715 493 625
             </InfoItem>
-            <InfoItem icon="🕊️" title="Our Motto">
+            <InfoItem title="Our Motto">
               &ldquo;Bridging Culture, Communities and Sustainable
               Development.&rdquo;
               <br />
               <span className="text-paper/50 text-sm">
-                Culture &middot; Inclusion &middot; Empowerment &middot;
-                Innovation &middot; Sustainability &middot; Partnership
+                Culture, Inclusion, Empowerment, Innovation, Sustainability and Partnership
               </span>
             </InfoItem>
           </Reveal>
@@ -152,13 +151,13 @@ export default function ContactForm() {
                 disabled={status === "loading"}
                 className="self-start inline-flex items-center gap-2 rounded-full bg-gold text-ink border-[1.5px] border-gold px-7 py-3.5 font-mono text-[0.82rem] uppercase tracking-wide hover:-translate-y-1 hover:shadow-[0_14px_26px_-10px_rgba(206,154,52,0.55)] transition-all disabled:opacity-60 disabled:translate-y-0"
               >
-                {status === "loading" ? "Sending…" : "Send Message →"}
+                {status === "loading" ? "Sending…" : "Send Message"}
               </button>
 
               {status === "success" && (
                 <p className="font-mono text-sm text-gold">
-                  Thank you! Your message has been received &mdash; we will
-                  get back to you soon.
+                  Thank you! Your message has been received. We will get back
+                  to you soon.
                 </p>
               )}
               {status === "error" && (
@@ -175,19 +174,14 @@ export default function ContactForm() {
 }
 
 function InfoItem({
-  icon,
   title,
   children,
 }: {
-  icon: string;
   title: string;
   children: React.ReactNode;
 }) {
   return (
     <div className="flex gap-4 items-start">
-      <div className="w-11 h-11 shrink-0 rounded-full bg-paper/10 border border-paper/20 flex items-center justify-center">
-        {icon}
-      </div>
       <div>
         <h4 className="font-display font-semibold mb-1">{title}</h4>
         <p className="text-paper/65 text-sm leading-relaxed">{children}</p>
