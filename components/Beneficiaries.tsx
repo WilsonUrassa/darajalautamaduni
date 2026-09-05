@@ -2,37 +2,30 @@ import Reveal from "./Reveal";
 
 const GROUPS = [
   {
-    icon: "👩🏾",
     title: "Women and Girls",
     desc: "Through skills, entrepreneurship, leadership and economic empowerment.",
   },
   {
-    icon: "🧑🏾",
     title: "Youth",
     desc: "Through education, employability, entrepreneurship, innovation and leadership.",
   },
   {
-    icon: "🧒🏾",
     title: "Children",
     desc: "Through inclusive education, cultural learning, protection and community-based support.",
   },
   {
-    icon: "♿",
     title: "Persons with Disabilities",
     desc: "Through inclusion, skills development, participation and equal opportunities.",
   },
   {
-    icon: "🧓🏾",
     title: "Older Persons",
     desc: "Through social inclusion, dignity, intergenerational knowledge transfer and community support.",
   },
   {
-    icon: "🎭",
-    title: "Cultural Practitioners & Creative Communities",
+    title: "Cultural Practitioners and Creative Communities",
     desc: "Through promotion, capacity building, networking and economic opportunities.",
   },
   {
-    icon: "🌍",
     title: "Communities",
     desc: "Through integrated initiatives that strengthen livelihoods, culture, social cohesion and resilience.",
   },
@@ -60,8 +53,7 @@ export default function Beneficiaries() {
               delay={(i % 3) * 80}
               className="rounded-xl2 bg-sand p-7 hover:-translate-y-1 transition-transform"
             >
-              <span className="text-3xl">{g.icon}</span>
-              <h3 className="font-display font-bold text-lg mt-4 mb-2">{g.title}</h3>
+              <h3 className="font-display font-bold text-lg mb-2">{g.title}</h3>
               <p className="text-ink/65 text-sm leading-relaxed">{g.desc}</p>
             </Reveal>
           ))}
