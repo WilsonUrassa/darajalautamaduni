@@ -27,7 +27,7 @@ const STAKEHOLDERS = [
   },
   {
     title: "Foundations & Grant-Making Institutions",
-    desc: "To invest in innovative, community-based interventions.",
+    desc: "To invest in innovative, community based interventions.",
   },
   {
     title: "Corporate Partners",
@@ -89,8 +89,8 @@ export default function Partnership() {
               Ways to Partner With Us
             </h2>
             <p className="text-ink/70 mb-8">
-              We are particularly interested in long-term strategic
-              partnerships that can move beyond short-term interventions and
+              We are particularly interested in long term strategic
+              partnerships that can move beyond short term interventions and
               generate sustainable community impact.
             </p>
             <div className="flex flex-wrap gap-2.5">
