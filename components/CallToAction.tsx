@@ -32,9 +32,9 @@ export default function CallToAction() {
               We Don&rsquo;t Seek Donors. We Seek Partners.
             </h2>
             <p className="text-ink/70 mb-6">
-              We do not seek donors merely to finance activities &mdash; we
+              We do not seek donors merely to finance activities. We
               seek partners to build solutions with communities. We welcome
-              both financial and non-financial partnerships, including
+              both financial and non financial partnerships, including
               technical expertise, training, equipment, research, technology,
               networking, mentorship and institutional strengthening.
             </p>
@@ -54,8 +54,8 @@ export default function CallToAction() {
             <p className="text-paper/70 mt-4 mb-6 leading-relaxed">
               Tanzania possesses extraordinary cultural wealth, community
               knowledge, creativity and human potential. DARAJA LA UTAMADUNI
-              ORGANIZATION believes that culture can become a bridge&mdash;not
-              a barrier&mdash;to development. We invite development partners,
+              ORGANIZATION believes that culture can become a bridge, not
+              a barrier, to development. We invite development partners,
               donors, foundations, companies, government institutions,
               academic institutions, civil society organizations and
               philanthropists to join us in building communities that are:
