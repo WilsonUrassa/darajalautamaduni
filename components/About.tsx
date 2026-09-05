@@ -19,15 +19,15 @@ export default function About() {
         <Reveal className="mb-12 max-w-3xl">
           <span className="eyebrow">About Us</span>
           <h2 className="mt-4 font-display text-4xl font-bold tracking-tight md:text-5xl">About Daraja la Utamaduni Organization</h2>
-          <p className="mt-5 text-lg leading-relaxed text-ink/65">A culture-centred organization connecting Tanzania&apos;s heritage, people and creativity with opportunities for inclusive and sustainable development.</p>
+          <p className="mt-5 text-lg leading-relaxed text-ink/65">A culture centred organization connecting Tanzania&apos;s heritage, people and creativity with opportunities for inclusive and sustainable development.</p>
         </Reveal>
 
         <div className="grid gap-8 lg:grid-cols-[1.15fr_.85fr]">
           <Reveal className="rounded-[2rem] bg-sand p-7 shadow-sm md:p-10">
             <div className="space-y-5 text-[1.03rem] leading-relaxed text-ink/75">
-              <p className="text-lg font-medium text-ink">DARAJA LA UTAMADUNI ORGANIZATION is a Tanzanian non-governmental organization established to preserve, promote, and harness culture as a powerful foundation for community empowerment, social inclusion, peace, creativity, innovation, and sustainable development.</p>
+              <p className="text-lg font-medium text-ink">DARAJA LA UTAMADUNI ORGANIZATION is a Tanzanian non governmental organization established to preserve, promote, and harness culture as a powerful foundation for community empowerment, social inclusion, peace, creativity, innovation, and sustainable development.</p>
               <p>The Organization recognizes that culture is more than traditions, music, language, arts, and heritage. Culture is a powerful bridge that connects generations, strengthens identity, promotes social cohesion, creates economic opportunities, and provides communities with knowledge and solutions for addressing contemporary development challenges.</p>
-              <p>DARAJA LA UTAMADUNI ORGANIZATION therefore uses a culture-centred and community-driven approach to address social, economic, educational, environmental, and governance challenges affecting communities, particularly women, children, youth, persons with disabilities, older persons, and other vulnerable and marginalized groups.</p>
+              <p>DARAJA LA UTAMADUNI ORGANIZATION therefore uses a culture centred and community driven approach to address social, economic, educational, environmental, and governance challenges affecting communities, particularly women, children, youth, persons with disabilities, older persons, and other vulnerable and marginalized groups.</p>
               <p>Our work seeks to connect Tanzania&apos;s rich cultural heritage with modern opportunities, enabling communities to protect what is valuable from the past while developing the knowledge, skills, creativity, and resilience required for a better future.</p>
             </div>
           </Reveal>
