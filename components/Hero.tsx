@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_22%,rgba(206,154,52,0.20),transparent_30%),radial-gradient(circle_at_10%_80%,rgba(44,110,73,0.28),transparent_34%)]" />
       <div className="relative mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-12 px-6 pb-16 md:px-8 md:pb-20 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16 lg:pb-24">
         <Reveal>
-          <span className="eyebrow eyebrow-light">Tanzanian Non-Governmental Organization</span>
+          <span className="eyebrow eyebrow-light">Tanzanian Non Governmental Organization</span>
           <h1 className="mt-5 max-w-3xl font-display text-[2.65rem] font-extrabold leading-[1.02] tracking-tight md:text-[4rem] lg:text-[4.7rem]">Culture as a <span className="text-gold">Bridge</span> to Sustainable Development</h1>
           <p className="mt-7 max-w-2xl text-[1.05rem] leading-relaxed text-paper/75 md:text-[1.12rem]">DARAJA LA UTAMADUNI ORGANIZATION preserves, promotes and harnesses Tanzania&rsquo;s cultural heritage, indigenous knowledge and creativity as a foundation for community empowerment, social inclusion, peace and sustainable development.</p>
           <div className="mt-9 flex flex-wrap gap-4">
