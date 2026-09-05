@@ -55,11 +55,6 @@ export default function Philosophy() {
                 </div>
                 <h3 className="font-display font-bold text-xl mb-2">{s.title}</h3>
                 <p className="text-paper/60 text-sm leading-relaxed">{s.desc}</p>
-                {i < STEPS.length - 1 && (
-                  <span className="hidden md:block absolute top-5 -right-3 text-gold/70">
-                    &rarr;
-                  </span>
-                )}
               </Reveal>
             ))}
           </div>
